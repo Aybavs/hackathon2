@@ -24,9 +24,9 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.2" />
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            style="@style/custom_card_view_signup_style"
+            style="@style/Widget.MaterialComponents.CardView"
             android:layout_width="375dp"
             android:layout_height="500dp"
             android:layout_marginTop="4dp"
@@ -58,7 +58,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/circle1"
                     style="@style/card_circle_view_style"
                     android:layout_width="50dp"
@@ -90,10 +90,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/circle2"
-                    />
+                    app:layout_constraintEnd_toStartOf="@+id/circle2" />
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/circle2"
                     style="@style/card_circle_view_style"
                     android:layout_width="50dp"
@@ -103,7 +102,7 @@
                     app:layout_constraintStart_toEndOf="@+id/circle1"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/circle3"
                     style="@style/card_circle_view_style"
                     android:layout_width="50dp"
@@ -113,7 +112,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/circle2" />
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cirle4"
                     style="@style/card_circle_view_style"
                     android:layout_width="50dp"

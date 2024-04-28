@@ -145,7 +145,7 @@
                         android:layout_weight="0"
                         android:text="Dont' have an account?" />
 
-                    <TextView
+                    <Button
                         android:id="@+id/signup_loginscreen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
