@@ -19,6 +19,9 @@
             android:name=".MainPage"
             android:label="MainPage">
         </activity>
+        <activity android:name=".AtletlerActivity" />
+        <activity android:name=".AtletAdapter" />
+        <activity android:name=".Atlet" />
         <activity
             android:name=".MainActivity2_signup"
             android:exported="false" />

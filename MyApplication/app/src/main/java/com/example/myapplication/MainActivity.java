@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                                 String token = response.getString("token");
                                 Log.d("Token", token);
                                 // Token'i kullanarak bir sonraki ekrana geçiş yap
-                                Intent intent = new Intent(MainActivity.this, MainPage.class);
+                                Intent intent = new Intent(MainActivity.this, AtletlerActivity.class);
                                 intent.putExtra("TOKEN", token);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
