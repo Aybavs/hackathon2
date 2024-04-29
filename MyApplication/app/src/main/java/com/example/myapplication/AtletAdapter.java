@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.BreakIterator;
 import java.util.List;
 
 public class AtletAdapter extends RecyclerView.Adapter<AtletAdapter.ViewHolder> {
@@ -33,6 +34,8 @@ public class AtletAdapter extends RecyclerView.Adapter<AtletAdapter.ViewHolder> 
         Atlet atlet = atletList.get(position);
         holder.textViewName.setText(atlet.getName());
         holder.textViewCountry.setText(atlet.getCountry());
+        holder.textViewAge.setText(atlet.getAge());
+        holder.textViewDisciplinesName.setText(atlet.getDisciplines());
     }
 
     @Override
@@ -41,6 +44,8 @@ public class AtletAdapter extends RecyclerView.Adapter<AtletAdapter.ViewHolder> 
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView textViewAge;
+        TextView textViewDisciplinesName;
         TextView textViewName;
         TextView textViewCountry;
 
@@ -48,6 +53,8 @@ public class AtletAdapter extends RecyclerView.Adapter<AtletAdapter.ViewHolder> 
             super(itemView);
             textViewName = itemView.findViewById(R.id.atletName);
             textViewCountry = itemView.findViewById(R.id.atletUlke);
+            textViewAge = itemView.findViewById(R.id.age); // Yeni eklediğiniz öğe
+            textViewDisciplinesName = itemView.findViewById(R.id.disciplinesName); // Yeni eklediğiniz öğe
         }
     }
 }

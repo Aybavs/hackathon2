@@ -69,8 +69,10 @@ public class AtletlerActivity extends AppCompatActivity {
                                 // Atlet özelliklerini al ve işle
                                 String fullName = atletObject.getString("full_name");
                                 String nationality = atletObject.getString("nationality");
+                                String age = atletObject.getString("age");
+                                String disciplines = atletObject.getString("disciplines");
                                 // Yeni Atlet nesnesi oluştur ve listeye ekle
-                                Atlet atlet = new Atlet(fullName, nationality);
+                                Atlet atlet = new Atlet(fullName, nationality, age, disciplines);
                                 atletList.add(atlet);
                             }
                             // Adapter'a değişiklikleri bildir
