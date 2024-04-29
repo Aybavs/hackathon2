@@ -34,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         Button buttonLogin = findViewById(R.id.button_login);
+
+        Button buttonRegister = findViewById(R.id.signup_loginscreen);
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,11 +68,13 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
-                                String token = response.getString("token");
-                                Log.d("Token", token);
+                                String userId = response.getString("userId");
+                                Log.d("user_id", userId);
                                 // Token'i kullanarak bir sonraki ekrana geçiş yap
+                                User user  = new User();
+                                user.setUserId(Integer.parseInt(userId));
                                 Intent intent = new Intent(MainActivity.this, AtletlerActivity.class);
-                                intent.putExtra("TOKEN", token);
+                                intent.putExtra("user_id", userId);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                             } catch (JSONException e) {

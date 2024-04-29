@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#F1F0F0"
-    tools:context=".MainActivity2_signup">
+    tools:context=".RegisterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -119,7 +119,7 @@
                     app:layout_constraintVertical_bias="0.21" />
 
                 <Button
-                    android:id="@+id/button_login"
+                    android:id="@+id/button_register"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/app_theme"
@@ -185,8 +185,8 @@
                         android:layout_weight="0"
                         android:text="Zaten hesabınız var mı ?" />
 
-                    <TextView
-                        android:id="@+id/signup_loginscreen"
+                    <Button
+                        android:id="@+id/return_loginscreen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"

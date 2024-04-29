@@ -23,7 +23,7 @@
         <activity android:name=".AtletAdapter" />
         <activity android:name=".Atlet" />
         <activity
-            android:name=".MainActivity2_signup"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
